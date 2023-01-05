@@ -16,6 +16,12 @@ columns.forEach(changeColor);
 const inputButton = document.querySelector('.input');
 inputButton.addEventListener('click', () => {
     dimension = parseInt(prompt("What dimensions would you like? (input a number up to 100)"));
+
+    // Check if input is > 100, and prompt again if so.
+    while (dimension > 100) {
+        dimension = parseInt(prompt("Please choose a number up to 100 only"));
+    }
+
     gridRows = dimension;
     gridColumns = dimension;
 
