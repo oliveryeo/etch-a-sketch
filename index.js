@@ -4,20 +4,29 @@ const gridRows = 16;
 const gridColumns = 16;
 
 const gridSquares = document.querySelector('div.grid-squares');
-
 makeGrid(gridRows, gridColumns);
+
+const columns = document.querySelectorAll('.column');
+columns.forEach(changeColor);
+
+
+
+
+
+
+
 
 // ------------------------------------------FUNCTIONS----------------------------------
 // Create x rows with x elements in it using flex
 // e.g. Create 16 divs with another 16 divs in each div
 function makeGrid(rows, columns) {
-    for (let i = 1; i <= rows; i++) {
+    for (let i = 0; i < rows; i++) {
         // Create a row
         row = document.createElement('div');
         // Add class e.g row-1 for selection when adding columns
         row.classList.add(`row`);
         
-        // Create the number of columns and append all to the row div
+        // Create the number of squares (columns) and append all to the row div
         for (let j = 0; j < columns; j++) {
             column = document.createElement('div');
             column.classList.add(`column`);
@@ -27,4 +36,9 @@ function makeGrid(rows, columns) {
     }
 }
 
-// For loop to place every square in the grid
+// Change background-color upon hovering on the element
+function changeColor(column) {
+    column.addEventListener('mouseover', () => {
+        column.classList.add(`color-change`);
+    })
+}
