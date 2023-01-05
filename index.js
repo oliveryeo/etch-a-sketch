@@ -31,6 +31,7 @@ inputButton.addEventListener('click', () => {
 
     // Add the grid again
     makeGrid(gridRows, gridColumns);
+    columns.forEach(changeColor);
 })
 
 
