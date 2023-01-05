@@ -1,0 +1,22 @@
+.grid-squares {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-style: solid;
+    border-color: black;
+    width: 960px;
+    height: 960px;
+}
+
+.row {
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    flex: 1;
+}
+
+.column {
+    flex: 1;
+    border-style: solid;
+    border-color: black;
+}
