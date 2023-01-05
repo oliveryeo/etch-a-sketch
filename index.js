@@ -1,5 +1,7 @@
 // Create a script that inputs the desired grid dimensions (start with 16x16)
 const gridSquares = document.querySelector('div.grid-squares');
+
+// Set variable to know when the user 'mousedDown'ed.
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
