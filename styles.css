@@ -10,8 +10,6 @@
 
 .row {
     display: flex;
-    border-style: solid;
-    border-color: black;
     flex: 1;
 }
 
