@@ -1,18 +1,31 @@
 // Create a script that inputs the desired grid dimensions (start with 16x16)
 
-const gridRows = 16;
-const gridColumns = 16;
+// Initialise dimensions e.g. 16x16
+let gridRows = 16;
+let gridColumns = 16;
 
+// Make the grids
 const gridSquares = document.querySelector('div.grid-squares');
 makeGrid(gridRows, gridColumns);
 
+// Change color of grid upon hover to black
 const columns = document.querySelectorAll('.column');
 columns.forEach(changeColor);
 
+// Allow user input for dimension
+const inputButton = document.querySelector('.input');
+inputButton.addEventListener('click', () => {
+    dimension = parseInt(prompt("What dimensions would you like? (input a number up to 100)"));
+    gridRows = dimension;
+    gridColumns = dimension;
 
+    // Remove the grid by clearing the elements
+    // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+    gridSquares.textContent = '';
 
-
-
+    // Add the grid again
+    makeGrid(gridRows, gridColumns);
+})
 
 
 
@@ -36,7 +49,7 @@ function makeGrid(rows, columns) {
     }
 }
 
-// Change background-color upon hovering on the element
+// Change background-color upon hover on the element
 function changeColor(column) {
     column.addEventListener('mouseover', () => {
         column.classList.add(`color-change`);

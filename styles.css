@@ -1,3 +1,9 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid-squares {
     display: flex;
     flex-direction: column;
