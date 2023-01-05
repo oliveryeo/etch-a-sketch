@@ -42,7 +42,7 @@ function changeColor(column) {
     column.addEventListener('mouseover', (e) => {
         console.log(mouseDown);
         // If mouse is not held down, do not color.
-        if (e.type === 'mouseover' && !mouseDown){
+        if ((e.type === 'mouseover') && (!mouseDown)){
             return;
         }
         column.classList.add(`color-change`);
