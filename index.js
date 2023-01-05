@@ -31,6 +31,9 @@ inputButton.addEventListener('click', () => {
 
     // Add the grid again
     makeGrid(gridRows, gridColumns);
+
+    // Have to select columns again because they don't exist after content removal.
+    const columns = document.querySelectorAll('.column');
     columns.forEach(changeColor);
 })
 
