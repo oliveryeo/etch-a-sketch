@@ -3,8 +3,8 @@ const gridSquares = document.querySelector('div.grid-squares');
 
 // Set variable to know when the user 'mousedDown'ed.
 let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
 // Initialise initial appearance
 initialize();
